@@ -13,7 +13,7 @@ public class movimientointerfaz : MonoBehaviour {
 
     public void mjuego()
     {
-        SceneManager.LoadScene("escena juegos");
+        SceneManager.LoadScene("Escena pregunta");
     }
     public void mestadistica()
     {

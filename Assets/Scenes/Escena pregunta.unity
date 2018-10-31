@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   servidorBaseDatos: localhost
-  nombreBaseDatos: juego
+  nombreBaseDatos: fontaine
   usuarioBaseDatos: root
   "contrase\xF1aBaseDatos": 
 --- !u!4 &1909442573

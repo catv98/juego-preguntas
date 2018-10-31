@@ -18,8 +18,8 @@ public class preguntas : MonoBehaviour {
     public int Puntaje=0;
     public int valorcorrecto;
      int valora;
-     int valorb;
-     int valorc;
+     //int valorb;
+    // int valorc;
     string correctaS;
     string opcionaS;
     string opcionbS;
@@ -55,18 +55,18 @@ public class preguntas : MonoBehaviour {
     {
         
         numerorandom = Random.Range(1,5);
-        string _log = "`preguntas` WHERE `id` LIKE '" + numerorandom + "'";
+        string _log = "`preguntamts` WHERE `id` LIKE '" + numerorandom + "' AND `sub_tema_id` LIKE '1'";
         Adminsql _adminsql = GameObject.Find("AdminDB").GetComponent<Adminsql>();
         MySqlDataReader Resultado = _adminsql.Select(_log);
 
 
         Resultado.Read();
         
-            var pregunta = Resultado.GetString(1);
-            var opciona = Resultado.GetString(2);
-            var opcionb = Resultado.GetString(3);
-            var opcionc = Resultado.GetString(4);
-            var correcta = Resultado.GetString(5);
+            var pregunta = Resultado.GetString(3);
+            var opciona = Resultado.GetString(4);
+            var opcionb = Resultado.GetString(5);
+            var opcionc = Resultado.GetString(6);
+            var correcta = Resultado.GetString(7);
             //Debug.Log(pregunta);
             //texto = datos.
             textoP.text = pregunta;
@@ -77,10 +77,12 @@ public class preguntas : MonoBehaviour {
         opcionaS = opciona;
         opcionbS = opcionb;
         opcioncS = opcionc;
-            //a.Equals(textoopciona);
+        //a.Equals(textoopciona);
 
 
-        
+        botona();
+        botonb();
+        botonc();
         
         
         

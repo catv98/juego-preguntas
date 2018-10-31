@@ -27,7 +27,7 @@ public class Login : MonoBehaviour {
         
         var ids = Resultado.GetString(0);
         var nombre = Resultado.GetString(1);
-        var grado = Resultado.GetString(2);
+        var grado = Resultado.GetString(11);
 
         idsa = ids;
         Nombre = nombre;
