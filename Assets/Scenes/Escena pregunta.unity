@@ -1145,9 +1145,10 @@ MonoBehaviour:
   PuntajeT: {fileID: 1946702415}
   Puntaje: 0
   valorcorrecto: 0
-  valora: 0
-  valorb: 0
-  valorc: 0
+  servidorBaseDatos: 
+  nombreBaseDatos: 
+  usuarioBaseDatos: 
+  "contrase\xF1aBaseDatos": 
 --- !u!1 &1909442571
 GameObject:
   m_ObjectHideFlags: 0

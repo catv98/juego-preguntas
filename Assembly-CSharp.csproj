@@ -66,6 +66,7 @@
     <Compile Include="Assets\agregarpreguntas.cs" />
     <Compile Include="Assets\estudianteoprofe.cs" />
     <Compile Include="Assets\Login.cs" />
+    <Compile Include="Assets\MantenerTexto.cs" />
     <Compile Include="Assets\movimientointerfaz.cs" />
     <Compile Include="Assets\preguntas.cs" />
     <Compile Include="Assets\Puntuacion.cs" />

@@ -10,6 +10,10 @@ public class Login : MonoBehaviour {
     //public static GameControl control;
     public InputField id;
     public InputField contraseña;
+    public static string idsa;
+    public static string Nombre;
+    public static string Grado;
+    public GameObject textos;
 
 
     public void logear()
@@ -20,18 +24,29 @@ public class Login : MonoBehaviour {
 
         Resultado.Read();
 
-        var ids = Resultado.GetString(1);
-        var nombre = Resultado.GetString(2);
-        var grado = Resultado.GetString(3);
         
+        var ids = Resultado.GetString(0);
+        var nombre = Resultado.GetString(1);
+        var grado = Resultado.GetString(2);
 
+        idsa = ids;
+        Nombre = nombre;
+        Grado = grado;
+
+        //Debug.Log(idsa);
+        //Debug.Log(Nombre);
+        //Debug.Log(Grado);
+
+        textos.SetActive(true);
 
         if (Resultado.HasRows)
         {
+            
             Debug.Log("Login correcto");
             Resultado.Close();
             Debug.Log(Resultado);
             SceneManager.LoadScene("escena home");
+            
         }
         else {
             Debug.Log("No hay un usuario con este ID");
@@ -70,10 +85,10 @@ public class Login : MonoBehaviour {
     void Start () {
 		
 	}
+    
 
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

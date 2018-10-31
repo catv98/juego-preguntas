@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class salvarinformacione : MonoBehaviour {
 
-    public Text nombre;
-    public Text id;
-    public Text grado;
+    public static string sName;
+    public static string sid;
+    public static string sgrado;
+    //Text Name;
+    //Text identification;
+    //Text Grd;
 
 
     
@@ -15,11 +18,20 @@ public class salvarinformacione : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        
+
+        Debug.Log(sName);
+    }
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
+
+    // Update is called once per frame
+    void Update () {
+        sid = Login.idsa;
+        sName = Login.Nombre;
+        sgrado = Login.Grado;
+    }
 }
